@@ -2,25 +2,158 @@
     margin: 0;
     padding: 0;
 }
+
+  
+  .roboto-thin {
+    font-family: "Roboto", system-ui;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", system-ui;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+  
+.center{
+  padding-left: calc(50% - 560px);
+  padding-right: calc(50% - 560px);
+  }
+  
 .top {
-    padding-bottom: 99px;
+  padding-bottom: 99px;
 }
-.header {
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+a{
+  color:#000000;
+  text-decoration: none;
+
+}
+
+a:active {
+  color: #F25822; 
+}
+.active {
+  color: #F25822;
+}
+
+.top_header {
+  padding-top: 40px;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  font-weight: 533px;
+  font-size: 17px;
+}
+
+.header_references{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.get_standart{
+  width: 120px;
+  height: 40px;
+  border: none;
+  background-image: url('img/botton.png');
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+
 }
 
 .top_content {
-    margin-top: 125px;
-    margin-bottom: 160px;
+  margin-top: 84px;
+  margin-bottom: 160px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 39px;
+}
+
+.Marketing{
+background-image: url(img/Ellipse\ 2.svg);
+
+}
+
+.text {
+  padding-bottom: 17px;
+  height: 48px;
+  width: 466px;
+  color: (136, 136, 136);
+}
+
+.botton{
+  padding: 140px 40 px;
+  font-size: 15px;
+  
 
 }
 .subtitle {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+  font-weight: 400px;
+  font-size: 60px;
 }
-.title {
-    margin-bottom: 40px;
-}
+
+
+
 .top_buttons{
-    margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  outline: none;
+  border: none;
+  gap: 30px;
+}
+.button_start{
+  width: 140px;
+  height: 50px;
+  border: none;
+  background-image: url('img/botton.png');
+  background-size: cover;
+  align-items: center;
+}
+.button{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: none;
+  border: none;
+
+}
+
+.top_logos {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
