@@ -125,6 +125,8 @@ p {
 h1{
     margin: 0px;
 }
+
+
 .fetured_top{
     margin-top: 96px;
 }
@@ -230,3 +232,111 @@ h1{
     align-items: center; 
 }
 
+.background{
+    background-color: #222224;
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: center;
+    margin-top: 95px;
+
+}
+
+.back_header{
+    font-family: Lato;
+    font-size: 19.96px;
+    font-weight: 400;
+    line-height: 23.95px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FBFBFB;
+}
+.back_text{
+    font-family: Lato;
+    font-weight: 400;
+    line-height: 16.77px;
+    font-size: 13.97px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FBFBFB;
+}
+
+.background1{
+    display: grid;
+    justify-items: center;
+    margin-top: 103px;
+    margin-bottom: 104px;
+}
+
+.info{
+    background-image: url('img/photo\ subscribe.jpg');
+    height: 448px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.email_text h4{
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40.13px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 0px;
+}
+.email_text p{
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30.1px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+
+.email-input{
+  display: flex;
+  justify-content: center
+  
+}
+
+.C{
+   background-color: #222224; 
+   height: 79px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 665px;
+
+}
+
+
+.subscribe-form {
+    display: flex;
+    background-color: #E1E1E1;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 32px;
+  }
+  
+  .subscribe-form input[type="email"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+  }
+  
+  .subscribe-form button {
+    background-color: #F16D7F;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
