@@ -1,0 +1,232 @@
+.body {
+    margin: 0;
+    padding: 0;
+
+}
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.header{
+    width: 100%; /* Ширина в процентах экрана */
+    height: 75px; /* Заданная высота */
+    background-color: #000000; /* Цвет фона прямоугольника */
+    display: flex;
+    justify-content: space-between;
+}
+.header1{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 41px;
+    margin-left: 231px;
+}
+.header2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 33px;
+    margin-right: 240px;
+
+}
+
+.banner{
+    width: 100%; /* Ширина в процентах экрана */
+    height: 764px; /* Заданная высота */
+    background-color: #F1E4E6;/* Цвет фона прямоугольника */
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.rectangle{
+    margin-left: 63px;
+    margin-right: 16px;
+}
+
+p {
+    margin: 0; /* Убираем отступы сверху и снизу */
+  }
+.banner_text1{
+
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #222222;
+    font-size: 48px;
+
+}
+.banner_text2{
+
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #222222;
+    font-size: 32px;
+
+}
+
+.image_gallery{
+    padding-top: 65px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image_item{
+    position: relative;
+    width: 360px;
+
+}
+
+.image_item img {
+    width: 100%;  
+    height: auto; 
+}
+
+.text_item{
+    display: grid;
+    justify-items: center;
+    position: absolute;  
+    top: 50%;             
+    left: 50%;           
+    transform: translate(-50%, -50%);
+}
+
+.item_big{
+    width: 1140px;
+
+}
+.highlight1{
+    color: rgb(241, 109, 127);
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    align-items:center;
+
+}
+.highlight_text{
+    color: rgb(255, 255, 255);
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    align-items:center;
+}
+
+h1{
+    margin: 0px;
+}
+.fetured_top{
+    margin-top: 96px;
+}
+
+.image_fetured{
+    background-color: #F8F8F8;
+
+}
+
+.fetured{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 360px);
+    justify-content: center;
+}
+
+.fetured_top h1{
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 9px;
+
+}
+.fetured_top p{
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 48px;
+
+}
+.fetured_heading{
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.6px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+    margin-left: 16px;
+    margin-top: 24px;
+
+}
+.fetured_text{
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #000000;
+    margin-left: 16px;
+    margin-right: 29px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    
+    
+}
+.fetured_price{
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #F16D7F;
+    margin-left: 16px;
+    margin-right: 29px;
+}
+
+.browse {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #F26376;
+
+
+    border: 3px solid #F26376;
+    width: 212px; 
+    height: 48px; 
+    margin-top: 48px;
+    margin-left: 50%; 
+    margin-right: 50%; 
+    transform: translateX(-50%); 
+
+
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
