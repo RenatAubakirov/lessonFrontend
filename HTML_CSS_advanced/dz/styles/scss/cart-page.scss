@@ -1,0 +1,306 @@
+@import 'vars';
+@import 'mixins';
+
+.cart {
+    &__wrap {
+        padding-top: 96px;
+        padding-bottom: 128px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px
+    }
+
+    &__list {
+        @include flex-column;
+        gap: 40px;
+    }
+
+    &__item {
+        display: flex;
+        width: 652px;
+        height: 306px;
+        border: 1px solid #EAEAEA;
+        box-shadow: 17px 19px 24px 0px #00000021;
+        position: relative;
+    }
+
+    &__item-img {
+        height: 100%;
+    }
+
+    &__item-description {
+        margin-top: 22px;
+        margin-left: 32px;
+    }
+
+    &__item-title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #222222;
+        width: 262px;
+        margin-bottom: 42px;
+    }
+
+    &__item-text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        color: #575757;
+    }
+
+    &__item-text .highlighted {
+        color: $colorHighlight;
+    }
+
+    &__item-text input {
+        width: 44px;
+        height: 25px;
+        margin-left: 24px;
+        border: 1px solid #EAEAEA;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #656565;
+        text-align: center;
+        outline: none;
+    }
+
+    &__item-del {
+        position: absolute;
+        top: 28px;
+        right: 22px;
+        width: 18px;
+        height: 18px;
+        border: none;
+        background-color: #fff;
+
+        & svg path {
+            transition: fill 0.3s;
+        }
+
+        &:hover svg path {
+            transition: fill 0.3s;
+            fill: $colorHighlight;
+        }
+    }
+
+    &__buttons-box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+
+    &__button {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        background-color: #fff;
+        border: 1px solid #A4A4A4;
+        height: 50px;
+        padding: 16px 40px;
+    }
+}
+
+.forms-box {
+    @include flex-column;
+    max-width: 360px;
+    width: 100%;
+    gap: 57px;
+}
+
+.form-shipping {
+    @include flex-column;
+    gap: 20px;
+    padding-top: 17px;
+    width: 100%;
+
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+    }
+
+    &__input {
+        @include input-field;
+    }
+
+    &__button {
+        background: #FFFFFF;
+        border: 1px solid #A4A4A4;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        height: 35px;
+        padding: 0 15px;
+        align-self: self-start;
+        margin-top: 3px;
+    }
+}
+
+.form-checkout {
+    background-color: #F5F3F3;
+    padding: 39px 34px 42px;
+    @include flex-column;
+
+    &__subtotal {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        align-self: self-end;
+        margin-bottom: 12px;
+
+        & span {
+            padding-left: 26px;
+        }
+    }
+
+    &__grandtotal {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+        align-self: self-end;
+        margin-right: 3px;
+
+        & span {
+            padding-left: 26px;
+            color: $colorHighlight;
+            font-weight: 700;
+        }
+    }
+
+    &__separator {
+        border-top: 1px solid #E2E2E2;
+        margin: 21px 8px 17px;
+    }
+
+    &__button {
+        background: #F16D7F;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        border: none;
+        height: 50px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: $maxWidthPad) {
+    .cart {
+        &__wrap {
+            padding-top: 59px;
+            flex-direction: column;
+            gap: 64px;
+        }
+
+        &__item {
+            width: auto;
+        }
+
+        &__buttons-box {
+            display: flex;
+            justify-content: center;
+            margin-top: 22px;
+            gap: 48px;
+        }
+    }
+
+    .forms-box {
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: none;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .form-shipping {
+        padding-top: 0;
+        max-width: 360px;
+    }
+
+    .form-checkout {
+        width: 360px;
+        margin-top: 39px;
+    }
+}
+
+@media (max-width: $maxWidthMobile) {
+    .cart {
+        &__wrap {
+            padding: 39px 8px 96px;
+            gap: 48px;
+        }
+
+        &__list {
+            gap: 32px;
+        }
+
+        &__item {
+            width: auto;
+            height: 188px;
+        }
+
+        &__item-description {
+            margin-top: 13px;
+            margin-left: 17px;
+        }
+
+        &__item-title {
+            font-size: 16px;
+            line-height: 19px;
+            width: 144px;
+            margin-bottom: 26px;
+        }
+
+        &__item-text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__item-text input {
+            width: 24px;
+            height: 15px;
+            margin-left: 15px;
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        &__item-del {
+            top: 17px;
+            right: 12px;
+            width: 10px;
+            height: 10px;
+        }
+
+        &__buttons-box {
+            margin-top: 0;
+            gap: 10px;
+        }
+
+        &__button {
+            font-size: 12px;
+            line-height: 14px;
+            height: 33px;
+            width: 175px;
+            padding: 0;
+        }
+    }
+
+    .forms-box {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: none;
+        width: 100%;
+        gap: 48px;
+    }
+
+    .form-checkout {
+        margin-top: 0;
+    }
+}

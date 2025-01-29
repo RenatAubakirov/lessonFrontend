@@ -1,0 +1,57 @@
+@import 'vars';
+@import 'mixins';
+
+.footer {
+    background-color: #222224;
+
+    &__wrap {
+        min-height: 79px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__copyright {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FBFBFB;
+    }
+
+    &__social-box {
+        display: flex;
+        gap: 7px;
+    }
+
+    &__social-icon {
+        background-color: #FFF;
+        transition: background-color 0.3s;
+
+        & path {
+            transition: fill 0.3s;
+        }
+
+        &:hover {
+            background-color: $colorHighlight;
+        }
+
+        &:hover path {
+            fill: #fff;
+        }
+
+    }
+}
+
+
+@media (max-width: $maxWidthPad) {}
+
+@media (max-width: $maxWidthMobile) {
+    .footer {
+        &__wrap {
+            min-height: 143px;
+            flex-direction: column-reverse;
+            padding-top: 43px;
+            padding-bottom: 9px;
+        }
+    }
+}

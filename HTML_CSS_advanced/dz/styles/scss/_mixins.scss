@@ -1,0 +1,30 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-center {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin input-field {
+    height: 45px;
+    border: 1px solid #A4A4A4;
+    padding: 0 17px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #222222;
+    outline: none;
+
+    &::placeholder {
+        color: #B1B1B1;
+    }
+}
