@@ -304,3 +304,86 @@ img {
     }
 
 }
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 375px;
+        padding: 0 0;
+    }
+
+    .header__nav__left {
+        margin-left: 16px;
+        margin-bottom: 18px;
+    }
+
+    .header__nav__right {
+        margin-right: 16px;
+        width: auto;
+    }
+
+    .header__nav__right__profile {
+        display: none;
+    }
+
+    .header__nav__right__cart {
+        display: none;
+        margin-top: 25px;
+        margin-bottom: 26px;
+    }
+
+    .top_wrap {
+        min-height: 363px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top__image {
+        display: none;
+    }
+
+    .top__text {
+        margin: 0 0;
+        padding-left: 15px;
+        border-left: 12px solid #F16D7F;
+        min-width: 263px;
+    }
+
+    .top__title {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .top__subtitle {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .categories_wrap {
+        margin-bottom: 64px;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .categories__item {
+        min-height: 248px;
+    }
+
+    .categories__accesories {
+        min-height: 111px;
+    }
+
+    .catalog_wrap {
+        margin-top: 64px;
+        margin-bottom: 85px;
+        padding: 0 8px;
+    }
+
+    .catalog__cards {
+        margin: 64px 0 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
