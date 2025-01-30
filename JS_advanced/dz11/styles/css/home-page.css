@@ -1,0 +1,217 @@
+.top {
+  background-color: #f1e4e6;
+}
+.top__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.top__image {
+  margin-left: -230px;
+}
+.top__text {
+  margin-top: 290px;
+  margin-bottom: auto;
+  margin-right: 101px;
+  padding-left: 16px;
+  border-left: 12px solid #f16d7f;
+  min-width: 405px;
+}
+.top__title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  color: #222222;
+}
+.top__subtitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #222222;
+}
+.top__subtitle_highlight {
+  color: #f16d7f;
+}
+
+.categories__wrap {
+  margin-top: 65px;
+  margin-bottom: 96px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 180px;
+}
+.categories__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.categories__item_women {
+  background-image: url(../../img/bg_category_women.png);
+}
+.categories__item_men {
+  background-image: url(../../img/bg_category_men.png);
+}
+.categories__item_kids {
+  background-image: url(../../img/bg_category_kids.png);
+}
+.categories__item_accesories {
+  background-image: url(../../img/bg_category_accesories.png);
+  grid-column: span 3;
+}
+.categories__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+.categories__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #f16d7f;
+}
+
+.fetured-items__wrap {
+  margin-bottom: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fetured-items__wrap .product-list {
+  margin: 48px 0;
+}
+.fetured-items__title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.fetured-items__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9f9f9f;
+  text-align: center;
+}
+.fetured-items__button {
+  border: 1px solid #ff6a6a;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f26376;
+  width: 212px;
+  height: 48px;
+  background-color: #ffffff;
+}
+.fetured-items__pagination {
+  border: 1px solid #EBEBEB;
+  display: flex;
+  margin-bottom: 36px;
+}
+.fetured-items__pagination__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  min-width: 44px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #5D5D5D;
+  padding: 0 5px;
+}
+.fetured-items__pagination__button:hover {
+  color: #f16d7f;
+}
+
+@media (max-width: 1024px) {
+  .top__image {
+    margin: 0;
+    max-width: 368px;
+  }
+  .top__text {
+    margin-top: 138px;
+    margin-bottom: auto;
+    margin-right: 21px;
+    padding-left: 16px;
+    border-left: 12px solid #f16d7f;
+    min-width: 311px;
+  }
+  .top__title {
+    font-size: 44px;
+    line-height: 53px;
+  }
+  .top__subtitle {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .categories__wrap {
+    margin-bottom: 110px;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 167px 116px;
+  }
+  .fetured-items__wrap {
+    margin-bottom: 65px;
+  }
+  .fetured-items__wrap .product-list {
+    margin: 72px 0 32px;
+  }
+  .fetured-items__title {
+    margin-bottom: 3px;
+  }
+}
+@media (max-width: 767px) {
+  .top__wrap {
+    min-height: 363px;
+    justify-content: center;
+    align-items: center;
+  }
+  .top__image {
+    display: none;
+  }
+  .top__text {
+    margin: 0 0;
+    padding-left: 15px;
+    border-left: 12px solid #f16d7f;
+    min-width: 263px;
+  }
+  .top__title {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .top__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .categories__wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    margin-bottom: 64px;
+    gap: 32px;
+  }
+  .categories__item {
+    min-height: 248px;
+  }
+  .categories__item_accesories {
+    min-height: 111px;
+  }
+  .fetured-items__wrap {
+    margin-top: 64px;
+    margin-bottom: 96px;
+    padding: 0 8px;
+  }
+  .fetured-items__wrap .product-list {
+    margin: 64px 0 40px;
+  }
+}/*# sourceMappingURL=home-page.css.map */

@@ -1,0 +1,81 @@
+body {
+  font-family: "Lato";
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number],
+input[type=number]:hover,
+input[type=number]:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.animate-button {
+  cursor: pointer;
+}
+.animate-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+.animate-button:active {
+  transform: scale(1);
+  transition: transform 0.1s;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+    padding: 0 16px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 375px;
+    padding: 0 0;
+  }
+}/*# sourceMappingURL=general.css.map */

@@ -1,0 +1,186 @@
+.product-slider {
+  display: flex;
+  justify-content: center;
+  background-color: #F7F7F7;
+  padding-top: 11px;
+  padding-bottom: 42px;
+  position: relative;
+}
+.product-slider__button {
+  width: 47px;
+  height: 47px;
+  background-color: #EAEAEA;
+  align-self: center;
+  border: none;
+  color: #000000;
+  font-size: 22px;
+  position: absolute;
+}
+.product-slider__button :hover {
+  color: #f16d7f;
+}
+.product-slider__button_left {
+  left: 20px;
+}
+.product-slider__button_right {
+  right: 20px;
+}
+
+.product-description__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 65px 0;
+  border: #EAEAEA solid 1px;
+  background-color: #fff;
+  transform: translateY(-64px);
+}
+.product-description__category-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #f16d7f;
+}
+.product-description__separator1 {
+  width: 63px;
+  border-top: 3px solid #EF5B70;
+  margin: 12px 0;
+}
+.product-description__title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4D4D4D;
+  margin-bottom: 48px;
+}
+.product-description__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #5E5E5E;
+  max-width: 555px;
+}
+.product-description__price {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #EF5B70;
+  margin-top: 32px;
+}
+.product-description__separator2 {
+  width: 642px;
+  border-top: 1px solid #EAEAEA;
+  margin: 64px 0;
+}
+.product-description__filter-box {
+  display: flex;
+  gap: 23px;
+}
+.product-description__filter-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+}
+.product-description__filter-item::after {
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  padding-left: 9px;
+}
+.product-description__button-add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 212px;
+  height: 48px;
+  border: 1px solid #FF6A6A;
+  margin-top: 48px;
+  background-color: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F26376;
+  gap: 23px;
+}
+
+.other-products__wrap {
+  padding-top: 64px;
+  padding-bottom: 128px;
+}
+
+@media (max-width: 1024px) {
+  .product-slider {
+    padding-top: 30px;
+    padding-bottom: 42px;
+  }
+  .product-slider img {
+    max-height: 565px;
+  }
+  .product-slider__button_left {
+    left: 10px;
+  }
+  .product-slider__button_right {
+    right: 10px;
+  }
+  .product-description__wrap {
+    transform: none;
+    padding: 65px 25px;
+  }
+  .other-products__wrap {
+    padding-top: 128px;
+  }
+  .other-products_second {
+    order: -1;
+  }
+  .other-products_third {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .product-slider {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+  .product-slider img {
+    max-height: 454px;
+  }
+  .product-slider__button_left {
+    left: 5px;
+  }
+  .product-slider__button_right {
+    right: 5px;
+  }
+  .product-description__wrap {
+    padding: 65px 25px;
+  }
+  .product-description__title {
+    margin-bottom: 32px;
+  }
+  .product-description__text {
+    line-height: 20px;
+  }
+  .product-description__separator2 {
+    width: 145px;
+    margin: 32px 0 49px;
+  }
+  .product-description__filter-item {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .product-description__button-add-to-cart {
+    margin-top: 64px;
+  }
+  .other-products__wrap {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .other-products_second {
+    display: none;
+  }
+  .other-products_third {
+    display: block;
+  }
+}/*# sourceMappingURL=product-page.css.map */

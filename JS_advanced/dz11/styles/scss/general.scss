@@ -1,0 +1,86 @@
+@import 'vars';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+body {
+    @extend %font-main
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.animate-button {
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform .3s;
+    }
+
+    &:active {
+        transform: scale(1);
+        transition: transform .1s;
+    }
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container {
+    max-width: $maxWidthContentDesktop;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@media (max-width: $maxWidthPad) {
+    .container {
+        max-width: $maxWidthContentPad;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: $maxWidthMobile) {
+    .container {
+        max-width: $maxWidthContentMobile;
+        padding: 0 0;
+    }
+}
