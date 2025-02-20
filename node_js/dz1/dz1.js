@@ -7,6 +7,7 @@
 
 const http = require('http');
 
+// Объект для хранения данных о страницах и счетчиках просмотров
 const data = {
     "/": {
         content: `<a href="/about">Обо мне</a><h2>Главная</h2>`,
@@ -18,19 +19,30 @@ const data = {
     }
 };
 
-
+// Создаем HTTP сервер
 const server = http.createServer((req, res) => {
+    // Устанавливаем заголовок для ответа
     res.setHeader('Content-Type', 'text/html; charset=UTF-8');
 
+    // Проверяем, существует ли запрошенный URL в объекте data
     if (req.url in data) {
+        // Увеличиваем счетчик просмотров для текущего URL
+        data[req.url].counter++;
+
+        // Отправляем ответ с содержимым страницы и счетчиком просмотров
         res.statusCode = 200;
-        res.end(data[req.url].content + `<p>Количество просмотров: ${++data[req.url].counter}</p>`);
+        res.end(data[req.url].content + `<p>Количество просмотров: ${data[req.url].counter}</p>`);
     } else {
+        // Если URL не найден, отправляем ответ 404
         res.statusCode = 404;
         res.end(`<h3>Page not found!</h3>`);
     }
-})
+});
 
-const port = '3000';
+// Порт, на котором будет работать сервер
+const port = 3000;
 
-server.listen(port);
+// Запускаем сервер
+server.listen(port, () => {
+    console.log(`Сервер запущен на http://localhost:${port}`);
+});
