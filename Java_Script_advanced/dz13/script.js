@@ -57,7 +57,7 @@ data.forEach((element) => {
 
     delProduct.addEventListener("click", function (e) {
         cartForProducts.removeChild(cardBox);
-        containerOfCards.appendChild(cardBox); // Возвращаем карточку в исходный контейнер
-        cardBox.removeChild(delProduct); //Удаляем кнопку удаления из корзины.
+        containerOfCards.appendChild(cardBox);
+        cardBox.removeChild(delProduct); 
     });
 });
