@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button class="btn">Нажми</button>
+	</body>
+	<script>
+		let storage = [];
+
+		if (localStorage.getItem("pictures")) {
+			storage.join(JSON.parse(localStorage.getItem("pictures")));
+		}
+
+		const newData = {
+			id: 132,
+			likes: 0,
+		};
+
+		const newData2 = {
+			id: 133,
+			likes: 1,
+		};
+
+		const newData3 = { id: 134, likes: 3 };
+		const newData4 = { id: 135, likes: 10 };
+
+		storage.push(newData);
+		storage.push(newData2);
+		storage.push(newData3);
+		storage.push(newData4);
+
+		localStorage.setItem("pictures", JSON.stringify(storage));
+
+		console.log(storage);
+
+		const buttonEl = document.querySelector(".btn");
+
+		buttonEl.addEventListener("click", () => {
+			let likes = 0;
+			storage.forEach((data) => {
+				if (data.id === 135) {
+					likes = Number(data.likes + 1);
+					newData4.likes = likes;
+				}
+			});
+
+			localStorage.setItem("pictures", JSON.stringify(storage));
+		});
+	</script>
+</html>
