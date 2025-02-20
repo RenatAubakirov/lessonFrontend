@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    Задание 2: "Управление списком заказов"
+Реализуйте классы для управления продуктами и заказами:
+Класс Product (Продукт)
+● Свойства:
+○ name (название) — строка, представляющая название продукта.
+○ price (цена) — число, представляющее стоимость продукта.
+Класс Order (Заказ)
+● Свойства:
+○ orderNumber (номер заказа) — число, уникальный номер заказа.
+○ products (продукты) — массив, содержащий список продуктов в заказе.
+● Методы:
+○ addProduct(product) — метод, который принимает объект product и
+добавляет его в список продуктов заказа.
+○ getTotalPrice() — метод, который возвращает общую стоимость
+заказа, основанную на ценах продуктов.
+-->
+<script>
+    class Product {
+constructor(name, price) {
+this.name = name;
+this.price = price;
+}
+}
+class Order {
+constructor(orderNumber) {
+this.orderNumber = orderNumber;
+this.products = [];
+}
+addProduct(product) {
+this.products.push(product);
+}
+getTotalPrice() {
+return this.products.reduce((total, product) => total +
+product.price, 0);
+}
+}
+</script>
+</body>
+</html>
