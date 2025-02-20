@@ -1,0 +1,16 @@
+{
+  "name": "my-library257874", 
+  "version": "1.0.0", 
+  "main": "index.js", 
+  "scripts": {
+    "test": "node test.js" 
+  },
+  "keywords": ["random", "data", "generator"],
+  "author": "Your Name", 
+  "license": "ISC", 
+  "description": "A library for generating random data like names, numbers, etc.", 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RenatAubakirov/lessonFrontend/tree/main/node_js/dz2.git" 
+  }
+}
