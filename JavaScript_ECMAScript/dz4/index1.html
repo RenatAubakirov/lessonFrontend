@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    Задание 1: "Получение данных о пользователе"
+Реализуйте асинхронную функцию для получения данных о пользователе с удаленного
+сервера:
+Функция getUserData
+● Описание:
+1. Функция принимает идентификатор пользователя (ID) в качестве
+аргумента и использует fetch для получения данных с удаленного
+сервера.
+2. Функция возвращает промис, который разрешается с объектом данных о
+пользователе, если запрос был успешным.
+3. Если пользователь с указанным ID не найден, промис должен быть
+отклонен с соответствующим сообщением об ошибке.
+● Последовательность действий:
+1. Вызовите fetch, передав URL с нужным ID пользователя.
+2. Если ответ успешен (код 200), извлеките данные с помощью
+response.json().
+3. Верните объект с данными о пользователе.
+4. Если ответ не успешен, отклоните промис с сообщением об ошибке.
+Пример использования функции
+getUserData(1)
+.then(user => console.log(user))
+.catch(error => console.error(error));-->
+
+<script>
+
+async function getUserData(userId) {
+    try {
+        const response = await fetch(`https://api.example.com/users/${userId}`);
+        if (!response.ok) {
+            throw new Error('User not found');
+        }
+        const userData = await response.json();
+        return userData;
+    } catch (error) {
+        return Promise.reject(error.message);
+    }
+}
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    Задание 3: "Изменение стиля элемента через заданное время"
+Реализуйте функцию, которая изменяет стиль элемента с задержкой:
+Функция changeStyleDelayed
+● Описание:
+○ Функция принимает идентификатор элемента (id) и время задержки в
+миллисекундах (delay).
+○ После истечения времени задержки, функция должна изменить стиль
+элемента.
+Пример использования функции
+changeStyleDelayed('myElement', 2000); // Через 2 секунды изменяет
+стиль элемента с id 'myElement'
+-->
+<script>
+    function changeStyleDelayed(elementId, delay) {
+    // Используем setTimeout для задержки
+    setTimeout(() => {
+        // Находим элемент по его ID
+        const element = document.getElementById(elementId);
+
+        // Проверяем, существует ли элемент
+        if (element) {
+            // Изменяем стиль элемента (например, цвет фона и текста)
+            element.style.backgroundColor = 'lightblue';
+            element.style.color = 'darkblue';
+            element.style.padding = '10px';
+            element.style.borderRadius = '5px';
+        } else {
+            // Если элемент не найден, выводим сообщение об ошибке
+            console.error(`Элемент с ID "${elementId}" не найден.`);
+        }
+    }, delay); // Задержка в миллисекундах
+}
+</script>
+</body>
+</html>
