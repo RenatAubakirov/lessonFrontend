@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Расписание занятий</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<script src="./data.js"></script>
+	</head>
+	<body class="mb-2 bg-info-subtle">
+		<h1 class="title container text-center fs-1 mb-4">Расписание занятий</h1>
+		<div class="lessons-headers container d-flex flex-row mb-4 justify-content-around fs-5">
+			<p class="lessonName">Название занятия</p>
+			<p class="lessonTime">Время проведения</p>
+			<p class="lessonMaxMembers">Максимум учатников</p>
+			<p class="lessonCurrentMembers">Участников записалось</p>
+		</div>
+		<div class="lessons-items container fs-5 d-flex flex-column mb-3"></div>
+	</body>
+	<script>
+		const lessonsList = JSON.parse(lessonsData);
+		const lessonsBox = document.querySelector(".lessons-items");
+
+		lessonsList.forEach((lesson) => {
+			const lessonTitle = document.createElement("h3");
+			lessonTitle.classList.add("lessonTitle");
+			// lessonTitle.classList.add("pe-4");
+			lessonTitle.textContent = lesson.name;
+
+			const lessonTime = document.createElement("p");
+			lessonTime.textContent = lesson.time;
+
+			const lessonMaxMembers = document.createElement("p");
+			lessonMaxMembers.classList.add("maxMembers");
+			lessonMaxMembers.textContent = lesson.maxMembers;
+
+			const lessonCurrentMembers = document.createElement("p");
+			lessonCurrentMembers.classList.add("currentMembers");
+			lessonCurrentMembers.textContent = lesson.currentMembers;
+
+			const signUp = document.createElement("button");
+			signUp.classList.add("signUpButton");
+			signUp.classList.add("btn");
+			signUp.classList.add("btn-success");
+			signUp.textContent = "Записаться";
+
+			const signOut = document.createElement("button");
+			signOut.classList.add("signOutButton");
+			signOut.classList.add("btn");
+			signOut.classList.add("btn-danger");
+			signOut.classList.add("ms-3");
+			signOut.textContent = "Отменить запись";
+
+			const lessonElement = document.createElement("div");
+			lessonElement.classList.add("lessonElement");
+			lessonElement.classList.add("d-flex");
+			lessonElement.classList.add("flex-row");
+			lessonElement.classList.add("mb-6");
+			lessonElement.classList.add("justify-content-around");
+			lessonElement.appendChild(lessonTitle);
+			lessonElement.appendChild(lessonTime);
+			lessonElement.appendChild(lessonMaxMembers);
+			lessonElement.appendChild(lessonCurrentMembers);
+
+			const oneLessonElements = document.createElement("div");
+			oneLessonElements.classList.add("oneLessonElements");
+			oneLessonElements.classList.add("text-end");
+
+			oneLessonElements.appendChild(lessonElement);
+			oneLessonElements.appendChild(signUp);
+			oneLessonElements.appendChild(signOut);
+
+			lessonsBox.appendChild(oneLessonElements);
+		});
+
+		const lessonElement = document.querySelectorAll(".oneLessonElements");
+
+		lessonElement.forEach((element) => {
+			element.addEventListener("click", (event) => {
+				if (event.target.classList.contains("signUpButton")) {
+					const elements = event.target.closest("div");
+					const listElements = elements.childNodes[0].children;
+
+					let maxMembers = null;
+
+					for (const item of listElements) {
+						if (item.classList.contains("maxMembers")) {
+							maxMembers = item;
+						}
+					}
+
+					for (const value of listElements) {
+						if (value.className === "currentMembers") {
+							if (Number(value.textContent) < Number(maxMembers.textContent)) {
+								let countMembers = Number(value.textContent) + 1;
+								value.textContent = countMembers;
+							}
+						}
+					}
+				}
+
+				if (event.target.classList.contains("signOutButton")) {
+					const elements = event.target.closest("div");
+					const listElements = elements.childNodes[0].children;
+					let currentMembers = null;
+
+					for (const item of listElements) {
+						if (item.classList.contains("currentMembers")) {
+							currentMembers = item;
+						}
+					}
+
+					if (Number(currentMembers.textContent) === 0) {
+						currentMembers.textContent = 0;
+					} else {
+						let countMembers = +currentMembers.textContent - 1;
+						currentMembers.textContent = countMembers;
+					}
+				}
+			});
+		});
+	</script>
+</html>
