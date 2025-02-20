@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Создание счетчика
+Напишите функцию createCounter, которая создает счетчик и возвращает объект с
+тремя методами: increment, decrement и getValue. Метод increment должен
+увеличивать значение счетчика на 1, метод decrement должен уменьшать значение
+счетчика на 1, а метод getValue должен возвращать текущее значение счетчика.
+Значение счетчика должно быть доступно только через методы объекта, а не
+напрямую.
+Подсказка: Функция createCounter возвращает объект с методами для увеличения
+и уменьшения счетчика. Приватная переменная count доступна только через методы
+объекта, что обеспечивает инкапсуляцию данных.-->
+<script>
+    function createCounter() {
+        let count = 0; // Приватное свойство
+
+        return {
+            increment() {
+                count++;
+                return count;
+            },
+            decrement() {
+                count--;
+                return count;
+            },
+            getValue() {
+                return count; // Для получения текущего значения счетчика
+            }
+        };
+    }
+</script>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!--Задание №1
+Нахождение минимального числа в массиве
+Дан массив const arr = [1, 5, 7, 9]. Используя метод Math.min и оператор
+распространения (spread operator), найдите минимальное число в массиве. Решение
+должно быть написано в одной строке.
+Подсказка: Используйте оператор распространения Spread (...) для преобразования
+массива в аргументы функции Math.min. Это позволяет найти минимальное значение
+в массиве в одной строке.
+-->
+    <script>
+    const arr = [1, 5, 7, 9];
+    const minNumber = Math.min(...arr);
+    console.log(minNumber); // Ожидаемый вывод: 1
+    </script>
+</body>
+</html>
