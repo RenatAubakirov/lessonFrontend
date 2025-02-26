@@ -1,0 +1,20 @@
+.Comment {
+    background-color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .Comment__delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .Comment__delete-btn:hover {
+    transform: scale(1.2);
+  }
+  
