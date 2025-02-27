@@ -1,0 +1,62 @@
+@import 'vars';
+@import 'mixins';
+
+.advantages {
+    background-color: #222224;
+
+    &__wrap {
+        padding-top: 103px;
+        padding-bottom: 104px;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        @include flex-column-center;
+        max-width: 360px;
+        min-height: 134px;
+
+        & svg path {
+            fill: $colorHighlight;
+        }
+    }
+
+    &__item-title {
+        font-weight: 400;
+        font-size: 19.96px;
+        line-height: 24px;
+        color: #fbfbfb;
+        margin-top: auto;
+        margin-bottom: 16px;
+    }
+
+    &__item-text {
+        font-weight: 400;
+        font-size: 13.972px;
+        line-height: 17px;
+        text-align: center;
+        color: #fbfbfb;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: $maxWidthPad) {
+    .advantages {
+        &__wrap {
+            @include flex-column-center;
+            padding-top: 48px;
+            padding-bottom: 64px;
+            gap: 48px;
+        }
+    }
+}
+
+@media (max-width: $maxWidthMobile) {
+    .advantages {
+        &__wrap {
+            padding-top: 48px;
+            padding-bottom: 81px;
+            gap: 46px;
+        }
+    }
+}
